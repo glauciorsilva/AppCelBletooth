@@ -23,16 +23,16 @@ Connect. Essa integração é a próxima etapa.
 3. Abra o .apk no celular e permita "instalar apps desconhecidos".
 4. Na primeira vez, aceite localização **"Permitir o tempo todo"**, Bluetooth / dispositivos por perto e notificações.
 
-## Configurar o Firebase (banco de dados)
+## Firebase (banco de dados)
 
-1. Crie um projeto em <https://console.firebase.google.com>.
-2. Em **Authentication → Método de login**, ative **E-mail/senha**.
-3. Em **Firestore Database**, crie o banco (região `southamerica-east1`) e cole em **Regras** o conteúdo de `firestore.rules`.
-4. Em **Configurações do projeto → Seus apps**, adicione um app **Web** e copie a configuração.
-5. No GitHub, abra **Settings → Secrets and variables → Actions → Variables** e crie `FIREBASE_API_KEY`,
-   `FIREBASE_AUTH_DOMAIN`, `FIREBASE_PROJECT_ID`, `FIREBASE_STORAGE_BUCKET`, `FIREBASE_MESSAGING_SENDER_ID` e `FIREBASE_APP_ID`.
-   Para desenvolvimento local, use o `.env` (copie de `.env.example`).
-6. Rode o workflow de novo para gerar um APK já conectado. No app, crie sua conta na aba **Conta**.
+O app já aponta para o projeto **appcel-52588** (configuração em `src/firebase.ts`). No console do Firebase, confira:
+
+1. **Authentication → Método de login:** **E-mail/senha** ativado.
+2. **Firestore Database → Regras:** o conteúdo de `firestore.rules`, publicado.
+3. No app, crie sua conta na aba **Conta**. Os treinos finalizados passam a ser enviados automaticamente.
+
+Para usar outro projeto, defina as variáveis `EXPO_PUBLIC_FIREBASE_*` no `.env` (veja `.env.example`) ou nas
+Variables do repositório (Settings → Secrets and variables → Actions).
 
 ### Estrutura dos dados no Firestore
 
