@@ -1,12 +1,22 @@
 {
-  "name": "appcel-tmp",
+  "name": "appcel-bluetooth",
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~57.0.29",
+    "expo-build-properties": "~57.0.22",
+    "expo-device": "~57.0.2",
+    "expo-location": "~57.0.21",
+    "expo-sqlite": "~57.0.4",
     "expo-status-bar": "~57.0.1",
+    "expo-task-manager": "~57.0.21",
+    "firebase": "^13.0.0",
     "react": "19.2.3",
-    "react-native": "0.86.3"
+    "react-native": "0.86.3",
+    "react-native-ble-plx": "^3.5.1",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-webview": "13.16.1"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",

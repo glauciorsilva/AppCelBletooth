@@ -1,5 +1,7 @@
 import { registerRootComponent } from 'expo';
 
+// Registra a tarefa de GPS em segundo plano antes de qualquer tela.
+import './src/locationTask';
 import App from './App';
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
